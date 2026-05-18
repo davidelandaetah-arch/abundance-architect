@@ -151,6 +151,66 @@ body::after {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.mantra {
+  padding: 4px 8px 18px;
+  margin-bottom: 22px;
+  text-align: center;
+  position: relative;
+}
+
+.mantra::before, .mantra::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+}
+.mantra::before { top: -6px; }
+.mantra::after { bottom: 0; }
+
+.mantra-label {
+  font-family: var(--sans);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.36em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.85;
+}
+
+.mantra-text {
+  font-family: var(--serif);
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text);
+  letter-spacing: 0.005em;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.mantra-text .em-dash {
+  color: var(--gold);
+  font-style: normal;
+  margin: 0 2px;
+}
+
+.mantra-text .declaration {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+}
+
 .section-label {
   font-family: var(--sans);
   font-size: 9px;
@@ -740,6 +800,13 @@ textarea.edit:focus { outline: none; border-color: var(--gold-dim); }
   </header>
 
   <section class="view active" id="view-identity">
+    <div class="mantra">
+      <div class="mantra-label">Daily Invocation</div>
+      <div class="mantra-text">
+        I expand in abundance, success, and love every day <span class="em-dash">—</span> and I inspire those around me to do the same.
+        <span class="declaration">I am a builder of reality.</span>
+      </div>
+    </div>
     <div class="section-label">I am the type of man who</div>
     <div id="traits-list"></div>
     <div class="ritual-block">
